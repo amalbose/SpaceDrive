@@ -1,0 +1,24 @@
+###############################
+#        DEVICE SETTINGS      #
+###############################
+
+#Type of device: OPENGL, DIRECTX
+DRIVER_TYPE=OPENGL
+
+#Window width (1024, 1376 etc)
+SCREEN_WIDTH=800
+
+#Window height (600, 768 etc)
+SCREEN_HEIGHT=600
+
+#Bits 16, 32
+BITS=32
+
+#FullScreen mode (TRUE/FALSE)
+FULLSCREEN=FALSE
+
+#Stencil buffer (TRUE/FALSE)
+STENCIL_BUFFER=FALSE
+
+#VSync (TRUE/FALSE)
+VSYNC=TRUE

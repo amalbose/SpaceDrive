@@ -1,0 +1,28 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+# Directory
+Debug
+
+# Project files
+.cproject
+.project
+
+# Temp files
+*~
+
+#Output log
+axagame.log
+/DebugQT
+/AxaGame.pro.user

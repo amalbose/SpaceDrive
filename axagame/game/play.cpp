@@ -29,6 +29,40 @@ Play::~Play() {
 }
 
 int Play::init() {
+	Logger(INFO) << "Initialized play state";
+
+	IAnimatedMesh* mesh = irrScene->getMesh("data/media/spaceCraft.obj"); //3ds , obj
+	IAnimatedMeshSceneNode* node = irrScene->addAnimatedMeshSceneNode(mesh);
+
+	IAnimatedMesh* mesh1 = irrScene->getMesh("data/media/levelOne.dae"); //3ds , obj
+	IAnimatedMeshSceneNode* node1 = irrScene->addAnimatedMeshSceneNode(mesh1);
+	node1->setScale(vector3df(20, 20, 20));
+
+	if (node) {
+		//node->setMaterialFlag(EMF_LIGHTING, false);
+		node->setFrameLoop(0, 310);
+		node->setMaterialTexture(0, irrDriver->getTexture("data/media/spaceCraft.png"));
+		node->setPosition(vector3df(0, 0, 0));
+	}
+	if (node1) {
+		//node->setMaterialFlag(EMF_LIGHTING, false);
+		node1->setFrameLoop(0, 310);
+		node1->setMaterialTexture(0, irrDriver->getTexture("data/media/levelOne.png"));
+		node1->setPosition(vector3df(0, 0, 0));
+	}
+
+	ICameraSceneNode* cam = irrScene->addCameraSceneNode(0, core::vector3df(0.0f, 0.0f, 0.0f),
+			core::vector3df(0.0f, 0.0f, 0.0f), -1);
+	cam->bindTargetAndRotation(true);
+	cam->setPosition(vector3df(0, 10, -5));
+	cam->setTarget(vector3df(0, 0, 30));
+	vector3df diff = vector3df(0, 0, 0) - vector3df(0, 30, -30);
+	ILightSceneNode* light = irrScene->addLightSceneNode(0, vector3df(0.0f, 200.0f, 0.0f),
+			SColorf(1.0f, 1.0f, 1.0f, 1.0f), 300.0f);
+	ILightSceneNode* ulight = irrScene->addLightSceneNode(0, vector3df(0.0f, -200.0f, 0.0f),
+			SColorf(1.0f, 1.0f, 1.0f, 1.0f), 50.0f);
+	ILightSceneNode* blight = irrScene->addLightSceneNode(0, vector3df(0.0f, -200.0f, -100.0f),
+			SColorf(1.0f, 1.0f, 1.0f, 1.0f), 50.0f);
 	return 1;
 }
 int Play::close() {

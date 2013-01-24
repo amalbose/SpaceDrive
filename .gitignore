@@ -23,6 +23,7 @@ Debug
 *~
 
 #Output log
-axagame.log
+*.log
 /DebugQT
 /AxaGame.pro.user
+.settings

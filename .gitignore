@@ -16,8 +16,8 @@
 Debug
 
 # Project files
-.cproject
-.project
+#.cproject
+#.project
 
 # Temp files
 *~

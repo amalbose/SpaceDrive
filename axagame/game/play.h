@@ -26,6 +26,7 @@
 #include "../engine/constants.h"
 #include "../engine/state.h"
 #include "../utils/logger.h"
+#include "level.h"
 
 class Play: public State {
 public:
@@ -45,6 +46,13 @@ public:
 	void update();
 	void updateRender();
 	void render(float interpolation);
+
+	Level* getCurrentLevel() {return currentLevel; }
+	void setCurrentLevel(Level* level) {currentLevel = level; }
+
+private:
+	core::array<Level*> levelList;
+	Level* currentLevel;
 };
 
 #endif /* PLAY_H_ */

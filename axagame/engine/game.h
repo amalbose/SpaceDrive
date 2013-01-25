@@ -46,7 +46,7 @@ public:
 	void setDone(bool value) {
 		isRunning = !value;
 	}
-
+	State* getCurrentState() { return stateManager->getCurrentState(); }
 	//states
 	IEventReceiver* event;
 

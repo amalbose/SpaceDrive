@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<axagame name='SpaceDrive'>
+	<states>
+		<state type='PLAY'>
+			<levels>
+				<level>
+					<level-name>LevelOne</level-name>
+					<resources>
+						<resource>
+							<resource-name>spaceShip</resource-name>
+							<mesh>data/media/spaceCraft.obj</mesh>
+							<node-type>AnimatedMeshSceneNode</node-type>
+							<texture>data/media/spaceCraft.png</texture>
+						</resource>
+						<resource>
+							<resource-name>wormhole</resource-name>
+							<mesh>data/media/levelOne.dae</mesh>
+							<node-type>AnimatedMeshSceneNode</node-type>
+							<texture>data/media/levelOne.png</texture>
+							<scale>
+								<scale-x>20</scale-x>
+								<scale-y>20</scale-y>
+								<scale-z>20</scale-z>
+							</scale>
+						</resource>
+					</resources>
+				</level>
+			</levels>
+		</state>
+	</states>
+</axagame>

@@ -72,11 +72,13 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="axagame|game|test|engine" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
-						<entry excluding="data|log|game|engine|utils" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="axagame"/>
+						<entry excluding="rapidxml|axagame|game|engine|lib|test" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="data|game|log|engine|utils" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="axagame"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="axagame/engine"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="axagame/game"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="axagame/utils"/>
+						<entry excluding="rapidxml" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="lib"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="lib/rapidxml"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -124,11 +126,13 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="game|test|engine|axagame" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="rapidxml|lib|game|test|engine|axagame" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 						<entry excluding="game|data|utils|log|engine" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="axagame"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="axagame/engine"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="axagame/game"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="axagame/utils"/>
+						<entry excluding="rapidxml" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="lib"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="lib/rapidxml"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

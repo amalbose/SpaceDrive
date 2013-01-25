@@ -16,6 +16,7 @@ Requirements
 
 * [Bullet Physics](http://bulletphysics.org/)
 
+* Using [RapidXML] (http://rapidxml.sourceforge.net/) - Included with the source.
 
 Set Up
 ------

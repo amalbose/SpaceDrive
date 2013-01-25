@@ -52,8 +52,8 @@ bool Play::onMousePress(int button, int valueX, int valueY) {
 }
 void Play::onMouseLift(int button, int valueX, int valueY) {
 }
-//		virtual void onMouseWheel(float direction) { }
-
+void onMouseWheel(float direction) {
+}
 void Play::update() {
 }
 void Play::updateRender() {

@@ -64,17 +64,3 @@ int Level::init() {
 int Level::close() {
 	return 1;
 }
-
-bool Level::onKeyPress(int key) {
-	return false;
-}
-bool Level::onKeyLift(int key) {
-	return false;
-}
-void Level::onMouseMotion(float valueX, float valueY) {
-}
-bool Level::onMousePress(int button, int valueX, int valueY) {
-	return false;
-}
-void Level::onMouseLift(int button, int valueX, int valueY) {
-}

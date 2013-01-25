@@ -31,14 +31,10 @@ public:
 	int init();
 	int close();
 
-	bool onKeyPress(int key);
-	bool onKeyLift(int key);
-	void onMouseMotion(float valueX, float valueY);
-	bool onMousePress(int button, int valueX, int valueY);
-	void onMouseLift(int button, int valueX, int valueY);
 	char* getLevelName();
-	void setLevelName(char* name) { levelName = name; }
-	//void onMouseWheel(float direction);
+	void setLevelName(char* name) {
+		levelName = name;
+	}
 
 private:
 	char* levelName;

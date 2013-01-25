@@ -25,7 +25,7 @@ LevelManager::LevelManager() {
 }
 
 void LevelManager::parseLevelXML(const char* xmlFile) {
-	std::string xmlString = Utils::get_file_contents(xmlFile);
+	std::string xmlString = Utils::getFileContents(xmlFile);
 	rapidxml::xml_document<> doc;
 	char* cstr = new char[xmlString.size() + 1];  // Create char buffer to store string copy
 	strcpy(cstr, xmlString.c_str());  // Copy string into char buffer

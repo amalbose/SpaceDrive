@@ -26,13 +26,26 @@ Utils::Utils() {
 }
 
 std::string Utils::getCurrentTime() {
-	  time_t rawtime;
-	  struct tm * timeinfo;
-	  char buffer [80];
-	  time ( &rawtime );
-	  timeinfo = localtime ( &rawtime );
+	time_t rawtime;
+	struct tm * timeinfo;
+	char buffer[80];
+	time(&rawtime);
+	timeinfo = localtime(&rawtime);
 
-	  strftime (buffer,80,"%c",timeinfo);
-	  std::string finalString = buffer;
-	  return finalString;
+	strftime(buffer, 80, "%c", timeinfo);
+	std::string finalString = buffer;
+	return finalString;
+}
+
+std::string Utils::getFileContents(const char *filename) {
+	std::ifstream in(filename, std::ios::in | std::ios::binary);
+	if (in) {
+		std::ostringstream contents;
+		contents << in.rdbuf();
+		in.close();
+		return (contents.str());
+	} else {
+		Logger(ERROR) << "Could not open file " << filename;
+		return "";
+	}
 }

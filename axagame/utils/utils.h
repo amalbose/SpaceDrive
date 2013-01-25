@@ -21,13 +21,17 @@
 #ifndef UTILS_H_
 #define UTILS_H_
 
-#include <stdio.h>
+#include <fstream>
 #include <time.h>
 #include <iostream>
+#include "logger.h"
+
 class Utils {
 public:
 	Utils();
 	static std::string getCurrentTime();
+
+	static std::string getFileContents(const char *filename);
 };
 
 #endif /* UTILS_H_ */

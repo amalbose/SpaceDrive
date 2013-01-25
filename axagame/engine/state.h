@@ -37,7 +37,7 @@ public:
 	virtual void onMouseMotion(float valueX, float valueY) { }
 	virtual bool onMousePress(int button, int valueX, int valueY) { return false; }
 	virtual void onMouseLift(int button, int valueX, int valueY) { }
-//		virtual void onMouseWheel(float direction) { }
+	virtual void onMouseWheel(float direction) { }
 
 	virtual void update() { }
 	virtual void updateRender() { }

@@ -27,8 +27,8 @@ LevelData::LevelData(std::string name) :
 		levelName(name) {
 }
 
-LevelData::LevelData(core::array<Resource*> resources) :
-		resources(resources) {
+LevelData::LevelData(std::string name, core::array<Resource*> resources) :
+		levelName(name), resources(resources) {
 }
 
 void LevelData::addResource(Resource* resource) {

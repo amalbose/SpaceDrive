@@ -35,35 +35,37 @@ void LevelManager::parseLevelXML(const char* xmlFile) {
 	cur_node = cur_node->first_node("states")->first_node("state")->first_node("levels")->first_node("level");
 	rapidxml::xml_node<>* res_node;
 
-	core::array<LevelData*> levelData;
-
 	while (cur_node != NULL) {
+		std::string levelName = cur_node->first_node("level-name")->value();
 		res_node = cur_node->first_node("resources")->first_node("resource");
 		core::array<Resource*> tmpResources;
 		while (res_node != NULL) {
 			tmpResources.push_back(
 					new Resource(res_node->first_node("mesh")->value(), res_node->first_node("node-type")->value(),
-							res_node->first_node("texture")->value(), res_node->first_node("resource-name")->value()));
+							res_node->first_node("texture")->value(), res_node->first_node("resource-name")->value(),
+							atoi(res_node->first_node("scale")->value())));
 			res_node = res_node->next_sibling();
 		}
-		//levelData.push_back(tmpLvlData);
-		levelData.push_back(new LevelData(tmpResources));
+		levelDataVal.push_back(new LevelData(levelName, tmpResources));
 		tmpResources.clear();
 		cur_node = cur_node->next_sibling();
 	}
 	//display level data
-	int size = levelData.size();
+	int size = levelDataVal.size();
 	for (int i = 0; i < size; i++) { // no of levels
-		LevelData* one = levelData[i];
+		LevelData* one = levelDataVal[i];
 		core::array<Resource*> res = one->getResources();
 		int resSize = res.size();
 		for (int j = 0; j < resSize; j++) {
 			Resource *resOne = res[j];
 			std::cout << "=================" << std::endl;
+			std::cout << one->getLevelName() << std::endl;
+			std::cout << "=================" << std::endl;
 			std::cout << resOne->getMesh() << std::endl;
 			std::cout << resOne->getName() << std::endl;
 			std::cout << resOne->getNodeType() << std::endl;
 			std::cout << resOne->getTexture() << std::endl;
+			std::cout << resOne->getScale() << std::endl;
 			std::cout << "=================" << std::endl;
 		}
 	}

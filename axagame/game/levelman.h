@@ -24,15 +24,18 @@
 #include <cstring>
 #include <string>
 #include <sstream>
+#include "leveldata.h"
 #include "../engine/imports.h"
 #include "../../lib/rapidxml/rapidxml.hpp"
 #include "../utils/utils.h"
-#include "leveldata.h"
+#include "../utils/logger.h"
 
 class LevelManager {
 public:
 	LevelManager(const char* xmlFile);
 	void displayData();
+
+	LevelData* getLevelData(std::string lvlName);
 
 private:
 	core::array<LevelData*> levelDataVal;

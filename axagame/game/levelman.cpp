@@ -24,6 +24,17 @@ LevelManager::LevelManager(const char* xmlFile) {
 	parseLevelXML(xmlFile);
 }
 
+LevelData* LevelManager::getLevelData(std::string lvlName) {
+	int size = levelDataVal.size();
+	for (int i = 0; i < size; i++) {
+		if (levelDataVal[i]->getLevelName().compare(lvlName) == 0) {
+			return levelDataVal[i];
+		}
+	}
+	Logger(ERROR) << "Could not find level " << lvlName << " from level list.";
+	return NULL;
+}
+
 void LevelManager::parseLevelXML(const char* xmlFile) {
 	std::string xmlString = Utils::getFileContents(xmlFile);
 	rapidxml::xml_document<> doc;

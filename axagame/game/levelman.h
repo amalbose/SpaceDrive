@@ -33,8 +33,13 @@ class LevelManager {
 public:
 	LevelManager();
 
-	static void parseLevelXML(const char* xmlFile);
+	void parseLevelXML(const char* xmlFile);
 
+private:
+	core::array<LevelData*> levelDataVal;
 };
+
+// Declaring the static object
+//core::array<LevelData*> LevelManager::levelDataVal;
 
 #endif /* LEVELMAN_H_ */

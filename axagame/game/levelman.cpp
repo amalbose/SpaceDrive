@@ -33,5 +33,38 @@ void LevelManager::parseLevelXML(const char* xmlFile) {
 	delete[] cstr;
 	rapidxml::xml_node<>* cur_node = doc.first_node("axagame");
 	cur_node = cur_node->first_node("states")->first_node("state")->first_node("levels")->first_node("level");
-	std::cout << cur_node->first_node("level-name")->value();
+	rapidxml::xml_node<>* res_node;
+
+	core::array<LevelData*> levelData;
+
+	while (cur_node != NULL) {
+		res_node = cur_node->first_node("resources")->first_node("resource");
+		core::array<Resource*> tmpResources;
+		while (res_node != NULL) {
+			tmpResources.push_back(
+					new Resource(res_node->first_node("mesh")->value(), res_node->first_node("node-type")->value(),
+							res_node->first_node("texture")->value(), res_node->first_node("resource-name")->value()));
+			res_node = res_node->next_sibling();
+		}
+		//levelData.push_back(tmpLvlData);
+		levelData.push_back(new LevelData(tmpResources));
+		tmpResources.clear();
+		cur_node = cur_node->next_sibling();
+	}
+	//display level data
+	int size = levelData.size();
+	for (int i = 0; i < size; i++) { // no of levels
+		LevelData* one = levelData[i];
+		core::array<Resource*> res = one->getResources();
+		int resSize = res.size();
+		for (int j = 0; j < resSize; j++) {
+			Resource *resOne = res[j];
+			std::cout << "=================" << std::endl;
+			std::cout << resOne->getMesh() << std::endl;
+			std::cout << resOne->getName() << std::endl;
+			std::cout << resOne->getNodeType() << std::endl;
+			std::cout << resOne->getTexture() << std::endl;
+			std::cout << "=================" << std::endl;
+		}
+	}
 }

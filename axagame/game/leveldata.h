@@ -24,18 +24,14 @@
 #include "../engine/imports.h"
 #include <iostream>
 
-struct LevelScale {
-	int xVal, yVal, zVal;
-};
-
 class Resource {
 
 public:
 	Resource() {
 
 	}
-	Resource(std::string mesh, std::string nodeType, std::string texture, std::string name) :
-			mesh(mesh), nodeType(nodeType), texture(texture), name(name) {
+	Resource(std::string mesh, std::string nodeType, std::string texture, std::string name, int scale) :
+			mesh(mesh), nodeType(nodeType), texture(texture), name(name), scale(scale) {
 
 	}
 
@@ -55,30 +51,26 @@ public:
 		return name;
 	}
 
-	LevelScale getScale() const {
+	int getScale() const {
 		return this->scale;
 	}
 
-	void setScale(const LevelScale& scale) {
+	void setScale(int scale) {
 		this->scale = scale;
-	}
-
-	void setScale(int x, int y, int z) {
-		this->scale.xVal = x;
-		this->scale.yVal = y;
-		this->scale.zVal = z;
 	}
 
 private:
 	std::string mesh, nodeType, texture, name;
-	LevelScale scale;
+	int scale;
 };
 
 class LevelData {
 public:
 	LevelData();
 	LevelData(std::string name);
-	LevelData(core::array<Resource*> resources);
+	LevelData(std::string name, core::array<Resource*> resources);
+
+	std::string getLevelName() { return levelName; }
 	void addResource(Resource* resource);
 	core::array<Resource*> getResources() {
 		return this->resources;

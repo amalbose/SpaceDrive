@@ -25,6 +25,34 @@
 						</resource>
 					</resources>
 				</level>
+				<level>
+					<level-name>LevelTwo</level-name>
+					<resources>
+						<resource>
+							<resource-name>spaceShip2</resource-name>
+							<mesh>data/media/spaceCraft.obj</mesh>
+							<node-type>AnimatedMeshSceneNode</node-type>
+							<texture>data/media/spaceCraft.png</texture>
+						</resource>
+						<resource>
+							<resource-name>wormhole2</resource-name>
+							<mesh>data/media/levelOne.dae</mesh>
+							<node-type>AnimatedMeshSceneNode</node-type>
+							<texture>data/media/levelOne.png</texture>
+							<scale>
+								<scale-x>20</scale-x>
+								<scale-y>20</scale-y>
+								<scale-z>20</scale-z>
+							</scale>
+						</resource>
+						<resource>
+							<resource-name>spaceShips2</resource-name>
+							<mesh>data/media/spaceCraft.obj</mesh>
+							<node-type>AnimatedMeshSceneNode</node-type>
+							<texture>data/media/spaceCraft.png</texture>
+						</resource>
+					</resources>
+				</level>
 			</levels>
 		</state>
 	</states>

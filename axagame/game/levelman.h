@@ -24,8 +24,10 @@
 #include <cstring>
 #include <string>
 #include <sstream>
+#include "../engine/imports.h"
 #include "../../lib/rapidxml/rapidxml.hpp"
 #include "../utils/utils.h"
+#include "leveldata.h"
 
 class LevelManager {
 public:

@@ -20,8 +20,8 @@
 
 #include "levelman.h"
 
-LevelManager::LevelManager() {
-	// TODO Auto-generated constructor stub
+LevelManager::LevelManager(const char* xmlFile) {
+	parseLevelXML(xmlFile);
 }
 
 void LevelManager::parseLevelXML(const char* xmlFile) {
@@ -50,6 +50,9 @@ void LevelManager::parseLevelXML(const char* xmlFile) {
 		tmpResources.clear();
 		cur_node = cur_node->next_sibling();
 	}
+}
+
+void LevelManager::displayData() {
 	//display level data
 	int size = levelDataVal.size();
 	for (int i = 0; i < size; i++) { // no of levels

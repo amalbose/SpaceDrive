@@ -34,10 +34,10 @@
 						</resource>
 						<resource>
 							<resource-name>wormhole2</resource-name>
-							<mesh>data/media/levelOne.dae</mesh>
+							<mesh>data/media/levelTwo.dae</mesh>
 							<node-type>AnimatedMeshSceneNode</node-type>
 							<texture>data/media/levelOne.png</texture>
-							<scale>20</scale>
+							<scale>2</scale>
 						</resource>
 					</resources>
 				</level>

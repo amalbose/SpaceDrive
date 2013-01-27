@@ -27,7 +27,7 @@
 #define CONFIG_FILE "data/config.prop"
 
 #define STATE_DATA "data/states-data.xml"
-
+#define KEY_CONFIG "data/keys.config"
 //states
 #define STATE_PLAY "PLAYSTATE"
 

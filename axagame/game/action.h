@@ -23,21 +23,30 @@
 
 #include <map>
 #include <iostream>
+#include "../engine/imports.h"
 #include "../engine/constants.h"
+#include "../engine/event.h"
 #include "../utils/utils.h"
 #include "../utils/logger.h"
+enum Actions {
+	ACCELERATE, DECELERATE, UP, DOWN, LEFT, RIGHT, BRAKE
+};
 
 class Action {
 public:
 	Action();
-	std::string getValue(char* key);
+	const char* getValue(const char* key);
+	int getKey(Actions actionType);
 
 private:
 	void collectData();
+	void getConfiguration();
+	std::string getAction(Actions actionType);
 
 	std::ifstream* keyFile;
 	char* keyConfigFile = KEY_CONFIG;
-	std::map<std::string, std::string> keyList;
+	std::map<std::string,const char*> keyList;
+	std::map<Actions, irr::EKEY_CODE> keyConfig;
 };
 
 #endif /* ACTION_H_ */

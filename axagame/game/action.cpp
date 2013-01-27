@@ -21,7 +21,6 @@
 #include "action.h"
 
 Action::Action() {
-	// TODO Auto-generated constructor stub
 	std::ifstream file(keyConfigFile);
 	keyFile = &file;
 	if (file == NULL) {

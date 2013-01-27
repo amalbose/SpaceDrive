@@ -20,7 +20,6 @@
 
 #include "engine/game.h"
 
-
 int main(int argc, char **argv) {
 
 	if (Game::Instance().init(argc, argv)) {

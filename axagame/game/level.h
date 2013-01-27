@@ -27,6 +27,15 @@
 #include "levelman.h"
 #include "leveldata.h"
 
+class Nodes {
+public:
+	Nodes(std::string name, IAnimatedMeshSceneNode* aniNode) :
+			nodeName(name), node(aniNode) {
+	}
+	std::string nodeName;
+	IAnimatedMeshSceneNode* node;
+};
+
 class Level {
 public:
 	Level(char* name);
@@ -39,10 +48,19 @@ public:
 		levelName = name;
 	}
 
+	//Events
+	bool onKeyPress(int key);
+	bool onKeyLift(int key);
+	void onMouseMotion(float valueX, float valueY);
+	bool onMousePress(int button, int valueX, int valueY);
+	void onMouseLift(int button, int valueX, int valueY);
+	void onMouseWheel(float direction);
+
 private:
 	char* levelName;
 	LevelManager* levelMan;
 	const char* stateDataFile = STATE_DATA;
+	core::array<Nodes*> nodeList;
 };
 
 #endif /* LEVEL_H_ */

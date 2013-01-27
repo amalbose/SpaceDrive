@@ -41,6 +41,7 @@ int Level::init() {
 			node->setScale(vector3df(lvlRes[i]->getScale(), lvlRes[i]->getScale(), lvlRes[i]->getScale()));
 			node->setPosition(vector3df(0, 0, 0));
 		}
+		nodeList.push_back(new Nodes(lvlRes[i]->getName(), node));
 	}
 
 	ICameraSceneNode* cam = irrScene->addCameraSceneNode(0, core::vector3df(0.0f, 0.0f, 0.0f),
@@ -57,6 +58,23 @@ int Level::init() {
 			SColorf(1.0f, 1.0f, 1.0f, 1.0f), 50.0f);
 	return 1;
 }
+
+bool Level::onKeyPress(int key) {
+	std::cout << "pressed" << key << std::endl;
+}
+bool Level::onKeyLift(int key) {
+	return false;
+}
+void Level::onMouseMotion(float valueX, float valueY) {
+}
+bool Level::onMousePress(int button, int valueX, int valueY) {
+	return false;
+}
+void Level::onMouseLift(int button, int valueX, int valueY) {
+}
+void Level::onMouseWheel(float direction) {
+}
+
 int Level::close() {
 	return 1;
 }

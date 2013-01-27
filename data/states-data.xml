@@ -37,7 +37,7 @@
 							<mesh>data/media/levelTwo.dae</mesh>
 							<node-type>AnimatedMeshSceneNode</node-type>
 							<texture>data/media/levelOne.png</texture>
-							<scale>2</scale>
+							<scale>20</scale>
 						</resource>
 					</resources>
 				</level>

@@ -22,29 +22,25 @@
 
 Level::Level(char* name) :
 		levelName(name) {
+	levelMan = new LevelManager(stateDataFile);
 }
 
 int Level::init() {
 	Logger(INFO) << "Initialized play state";
 
-	IAnimatedMesh* mesh = irrScene->getMesh("data/media/spaceCraft.obj"); //3ds , obj
-	IAnimatedMeshSceneNode* node = irrScene->addAnimatedMeshSceneNode(mesh);
+	LevelData* lvlData = levelMan->getLevelData(levelName);
+	core::array<Resource*> lvlRes = lvlData->getResources();
+	int resSize = lvlRes.size();
+	for (int i = 0; i < resSize; i++) {
+		IAnimatedMesh* mesh = irrScene->getMesh(lvlRes[i]->getMesh().c_str());
+		IAnimatedMeshSceneNode* node = irrScene->addAnimatedMeshSceneNode(mesh);
 
-	IAnimatedMesh* mesh1 = irrScene->getMesh("data/media/levelOne.dae"); //3ds , obj
-	IAnimatedMeshSceneNode* node1 = irrScene->addAnimatedMeshSceneNode(mesh1);
-	node1->setScale(vector3df(20, 20, 20));
-
-	if (node) {
-		//node->setMaterialFlag(EMF_LIGHTING, false);
-		node->setFrameLoop(0, 310);
-		node->setMaterialTexture(0, irrDriver->getTexture("data/media/spaceCraft.png"));
-		node->setPosition(vector3df(0, 0, 0));
-	}
-	if (node1) {
-		//node->setMaterialFlag(EMF_LIGHTING, false);
-		node1->setFrameLoop(0, 310);
-		node1->setMaterialTexture(0, irrDriver->getTexture("data/media/levelOne.png"));
-		node1->setPosition(vector3df(0, 0, 0));
+		if (node) {
+			//node->setMaterialFlag(EMF_LIGHTING, false);
+			node->setMaterialTexture(0, irrDriver->getTexture(lvlRes[i]->getTexture().c_str()));
+			node->setScale(vector3df(lvlRes[i]->getScale(), lvlRes[i]->getScale(), lvlRes[i]->getScale()));
+			node->setPosition(vector3df(0, 0, 0));
+		}
 	}
 
 	ICameraSceneNode* cam = irrScene->addCameraSceneNode(0, core::vector3df(0.0f, 0.0f, 0.0f),

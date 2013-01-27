@@ -26,7 +26,7 @@ Action::Action() {
 	if (file == NULL) {
 		Logger(ERROR) << "Error initializing log file : " << keyFile;
 	}
-	collectData();
+	getConfiguration();
 }
 
 void Action::collectData() {
@@ -48,15 +48,58 @@ void Action::collectData() {
 		posEqual = line.find('=');
 		name = line.substr(0, posEqual);
 		value = line.substr(posEqual + 1);
-		std::cout << "Collecting " << Utils::trim(name) << " and " << Utils::trim(value) << std::endl;
-		keyList.insert(std::pair<std::string, std::string>(Utils::trim(name), Utils::trim(value)));
+		keyList.insert(std::pair<std::string,const char*>(Utils::trim(name), Utils::trim(value).c_str()));
 	}
 }
 
-std::string Action::getValue(char* key) {
-	std::string value = keyList[key];
+void Action::getConfiguration() {
+	//collecting data for config
+	collectData();
+
+	//Converting keyList to key configure map
+	//ACCELERATE
+	keyConfig.insert(std::pair<Actions, irr::EKEY_CODE>(ACCELERATE, Event::getKey(getValue("ACCELERATE"))));
+}
+
+const char* Action::getValue(const char* key) {
+	const char* value = keyList[key];
 	if (value == "") {
 		Logger(ERROR) << "Could not find key " << key;
 	}
 	return value;
+}
+
+std::string Action::getAction(Actions actionType) {
+	std::string action;
+	switch (actionType) {
+	case UP:
+		action = "up";
+		break;
+	case DOWN:
+		action = "down";
+		break;
+	case ACCELERATE:
+		action = "accelerate";
+		break;
+	case DECELERATE:
+		action = "decelerate";
+		break;
+	case LEFT:
+		action = "left";
+		break;
+	case RIGHT:
+		action = "right";
+		break;
+	case BRAKE:
+		action = "brake";
+		break;
+	default:
+		Logger(ERROR) << "Could not identify action type " << actionType;
+		break;
+	}
+	return action;
+}
+
+int Action::getKey(Actions actionType) {
+	return keyConfig[actionType];
 }

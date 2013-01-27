@@ -23,7 +23,7 @@
 Properties::Properties(char *fileName) {
 	std::ifstream file(fileName);
 	propFile = &file;
-	if (propFile == NULL) {
+	if (file == NULL) {
 		Logger(ERROR) << "Error initializing log file : " << fileName;
 	}
 	populateProps();
@@ -52,6 +52,10 @@ void Properties::populateProps() {
 	}
 }
 
-std::string Properties::getValue(char* key){
-	return propertyList[key];
+std::string Properties::getValue(char* key) {
+	std::string value = propertyList[key];
+	if (value == "") {
+		Logger(ERROR) << "Could not find key " << key;
+	}
+	return value;
 }

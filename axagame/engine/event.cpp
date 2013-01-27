@@ -84,7 +84,7 @@ bool Event::OnEvent(const SEvent &event) {
 	return false;
 }
 
-irr::EKEY_CODE Event::getKey(char* key) {
+irr::EKEY_CODE Event::getKey(const char* key) {
 	irr::EKEY_CODE keyCode;
 	if (std::strcmp(key, "a") == 0 || std::strcmp(key, "A") == 0) {
 		keyCode = KEY_KEY_A;

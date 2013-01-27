@@ -23,6 +23,9 @@
 #include "../engine/imports.h"
 #include "../engine/globals.h"
 #include "../utils/logger.h"
+#include "../engine/constants.h"
+#include "levelman.h"
+#include "leveldata.h"
 
 class Level {
 public:
@@ -38,6 +41,8 @@ public:
 
 private:
 	char* levelName;
+	LevelManager* levelMan;
+	const char* stateDataFile = STATE_DATA;
 };
 
 #endif /* LEVEL_H_ */

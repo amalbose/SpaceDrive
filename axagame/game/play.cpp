@@ -40,19 +40,22 @@ int Play::close() {
 }
 
 bool Play::onKeyPress(int key) {
-	return false;
+	return getCurrentLevel()->onKeyPress(key);
 }
 bool Play::onKeyLift(int key) {
-	return false;
+	return getCurrentLevel()->onKeyLift(key);
 }
 void Play::onMouseMotion(float valueX, float valueY) {
+	getCurrentLevel()->onMouseMotion(valueX,valueY);
 }
 bool Play::onMousePress(int button, int valueX, int valueY) {
-	return false;
+	return getCurrentLevel()->onMousePress(button,valueX,valueY);
 }
 void Play::onMouseLift(int button, int valueX, int valueY) {
+	getCurrentLevel()->onMouseLift(button,valueX,valueY);
 }
-void onMouseWheel(float direction) {
+void Play::onMouseWheel(float direction) {
+	getCurrentLevel()->onMouseWheel(direction);
 }
 void Play::update() {
 }

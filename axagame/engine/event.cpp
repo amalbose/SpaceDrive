@@ -86,99 +86,99 @@ bool Event::OnEvent(const SEvent &event) {
 
 irr::EKEY_CODE Event::getKey(char* key) {
 	irr::EKEY_CODE keyCode;
-	if (std::strcmp(key, "a") || std::strcmp(key, "A")) {
+	if (std::strcmp(key, "a") == 0 || std::strcmp(key, "A") == 0) {
 		keyCode = KEY_KEY_A;
-	} else if (std::strcmp(key, "b") || std::strcmp(key, "B")) {
+	} else if (std::strcmp(key, "b") == 0 || std::strcmp(key, "B") == 0) {
 		keyCode = KEY_KEY_B;
-	} else if (std::strcmp(key, "c") || std::strcmp(key, "C")) {
+	} else if (std::strcmp(key, "c") == 0 || std::strcmp(key, "C") == 0) {
 		keyCode = KEY_KEY_C;
-	} else if (std::strcmp(key, "d") || std::strcmp(key, "D")) {
+	} else if (std::strcmp(key, "d") == 0 || std::strcmp(key, "D") == 0) {
 		keyCode = KEY_KEY_D;
-	} else if (std::strcmp(key, "e") || std::strcmp(key, "E")) {
+	} else if (std::strcmp(key, "e") == 0 || std::strcmp(key, "E") == 0) {
 		keyCode = KEY_KEY_E;
-	} else if (std::strcmp(key, "f") || std::strcmp(key, "F")) {
+	} else if (std::strcmp(key, "f") == 0 || std::strcmp(key, "F") == 0) {
 		keyCode = KEY_KEY_F;
-	} else if (std::strcmp(key, "g") || std::strcmp(key, "G")) {
+	} else if (std::strcmp(key, "g") == 0 || std::strcmp(key, "G") == 0) {
 		keyCode = KEY_KEY_G;
-	} else if (std::strcmp(key, "h") || std::strcmp(key, "H")) {
+	} else if (std::strcmp(key, "h") == 0 || std::strcmp(key, "H") == 0) {
 		keyCode = KEY_KEY_H;
-	} else if (std::strcmp(key, "i") || std::strcmp(key, "I")) {
+	} else if (std::strcmp(key, "i") == 0 || std::strcmp(key, "I") == 0) {
 		keyCode = KEY_KEY_I;
-	} else if (std::strcmp(key, "j") || std::strcmp(key, "J")) {
+	} else if (std::strcmp(key, "j") == 0 || std::strcmp(key, "J") == 0) {
 		keyCode = KEY_KEY_J;
-	} else if (std::strcmp(key, "k") || std::strcmp(key, "K")) {
+	} else if (std::strcmp(key, "k") == 0 || std::strcmp(key, "K") == 0) {
 		keyCode = KEY_KEY_K;
-	} else if (std::strcmp(key, "l") || std::strcmp(key, "L")) {
+	} else if (std::strcmp(key, "l") == 0 || std::strcmp(key, "L") == 0) {
 		keyCode = KEY_KEY_L;
-	} else if (std::strcmp(key, "m") || std::strcmp(key, "M")) {
+	} else if (std::strcmp(key, "m") == 0 || std::strcmp(key, "M") == 0) {
 		keyCode = KEY_KEY_M;
-	} else if (std::strcmp(key, "n") || std::strcmp(key, "N")) {
+	} else if (std::strcmp(key, "n") == 0 || std::strcmp(key, "N") == 0) {
 		keyCode = KEY_KEY_N;
-	} else if (std::strcmp(key, "o") || std::strcmp(key, "O")) {
+	} else if (std::strcmp(key, "o") == 0 || std::strcmp(key, "O") == 0) {
 		keyCode = KEY_KEY_O;
-	} else if (std::strcmp(key, "p") || std::strcmp(key, "P")) {
+	} else if (std::strcmp(key, "p") == 0 || std::strcmp(key, "P") == 0) {
 		keyCode = KEY_KEY_P;
-	} else if (std::strcmp(key, "q") || std::strcmp(key, "Q")) {
+	} else if (std::strcmp(key, "q") == 0 || std::strcmp(key, "Q") == 0) {
 		keyCode = KEY_KEY_Q;
-	} else if (std::strcmp(key, "r") || std::strcmp(key, "R")) {
+	} else if (std::strcmp(key, "r") == 0 || std::strcmp(key, "R") == 0) {
 		keyCode = KEY_KEY_R;
-	} else if (std::strcmp(key, "s") || std::strcmp(key, "S")) {
+	} else if (std::strcmp(key, "s") == 0 || std::strcmp(key, "S") == 0) {
 		keyCode = KEY_KEY_S;
-	} else if (std::strcmp(key, "t") || std::strcmp(key, "T")) {
+	} else if (std::strcmp(key, "t") == 0 || std::strcmp(key, "T") == 0) {
 		keyCode = KEY_KEY_T;
-	} else if (std::strcmp(key, "u") || std::strcmp(key, "U")) {
+	} else if (std::strcmp(key, "u") == 0 || std::strcmp(key, "U") == 0) {
 		keyCode = KEY_KEY_U;
-	} else if (std::strcmp(key, "v") || std::strcmp(key, "V")) {
+	} else if (std::strcmp(key, "v") == 0 || std::strcmp(key, "V") == 0) {
 		keyCode = KEY_KEY_V;
-	} else if (std::strcmp(key, "w") || std::strcmp(key, "W")) {
+	} else if (std::strcmp(key, "w") == 0 || std::strcmp(key, "W") == 0) {
 		keyCode = KEY_KEY_W;
-	} else if (std::strcmp(key, "x") || std::strcmp(key, "X")) {
+	} else if (std::strcmp(key, "x") == 0 || std::strcmp(key, "X") == 0) {
 		keyCode = KEY_KEY_X;
-	} else if (std::strcmp(key, "y") || std::strcmp(key, "Y")) {
+	} else if (std::strcmp(key, "y") == 0 || std::strcmp(key, "Y") == 0) {
 		keyCode = KEY_KEY_Y;
-	} else if (std::strcmp(key, "z") || std::strcmp(key, "Z")) {
+	} else if (std::strcmp(key, "z") == 0 || std::strcmp(key, "Z") == 0) {
 		keyCode = KEY_KEY_Z;
-	} else if (std::strcmp(key, "0")) {
+	} else if (std::strcmp(key, "0") == 0) {
 		keyCode = KEY_KEY_0;
-	} else if (std::strcmp(key, "1")) {
+	} else if (std::strcmp(key, "1") == 0) {
 		keyCode = KEY_KEY_1;
-	} else if (std::strcmp(key, "2")) {
+	} else if (std::strcmp(key, "2") == 0) {
 		keyCode = KEY_KEY_2;
-	} else if (std::strcmp(key, "3")) {
+	} else if (std::strcmp(key, "3") == 0) {
 		keyCode = KEY_KEY_3;
-	} else if (std::strcmp(key, "4")) {
+	} else if (std::strcmp(key, "4") == 0) {
 		keyCode = KEY_KEY_4;
-	} else if (std::strcmp(key, "5")) {
+	} else if (std::strcmp(key, "5") == 0) {
 		keyCode = KEY_KEY_5;
-	} else if (std::strcmp(key, "6")) {
+	} else if (std::strcmp(key, "6") == 0) {
 		keyCode = KEY_KEY_6;
-	} else if (std::strcmp(key, "7")) {
+	} else if (std::strcmp(key, "7") == 0) {
 		keyCode = KEY_KEY_7;
-	} else if (std::strcmp(key, "8")) {
+	} else if (std::strcmp(key, "8") == 0) {
 		keyCode = KEY_KEY_8;
-	} else if (std::strcmp(key, "9")) {
+	} else if (std::strcmp(key, "9") == 0) {
 		keyCode = KEY_KEY_9;
-	} else if (std::strcmp(key, "left") || std::strcmp(key, "LEFT")) {
+	} else if (std::strcmp(key, "left") == 0 || std::strcmp(key, "LEFT") == 0) {
 		keyCode = KEY_LEFT;
-	} else if (std::strcmp(key, "right") || std::strcmp(key, "RIGHT")) {
+	} else if (std::strcmp(key, "right") == 0 || std::strcmp(key, "RIGHT") == 0) {
 		keyCode = KEY_RIGHT;
-	} else if (std::strcmp(key, "up") || std::strcmp(key, "UP")) {
+	} else if (std::strcmp(key, "up") == 0 || std::strcmp(key, "UP") == 0) {
 		keyCode = KEY_UP;
-	} else if (std::strcmp(key, "down") || std::strcmp(key, "DOWN")) {
+	} else if (std::strcmp(key, "down") == 0 || std::strcmp(key, "DOWN") == 0) {
 		keyCode = KEY_DOWN;
-	} else if (std::strcmp(key, "space") || std::strcmp(key, "SPACE")) {
+	} else if (std::strcmp(key, "space") == 0 || std::strcmp(key, "SPACE") == 0) {
 		keyCode = KEY_SPACE;
-	} else if (std::strcmp(key, "shift") || std::strcmp(key, "SHIFT")) {
+	} else if (std::strcmp(key, "shift") == 0 || std::strcmp(key, "SHIFT") == 0) {
 		keyCode = KEY_SHIFT;
-	} else if (std::strcmp(key, "ctrl") || std::strcmp(key, "CTRL")) {
+	} else if (std::strcmp(key, "ctrl") == 0 || std::strcmp(key, "CTRL") == 0) {
 		keyCode = KEY_CONTROL;
-	} else if (std::strcmp(key, "tab") || std::strcmp(key, "TAB")) {
+	} else if (std::strcmp(key, "tab") == 0 || std::strcmp(key, "TAB") == 0) {
 		keyCode = KEY_TAB;
-	} else if (std::strcmp(key, "alt") || std::strcmp(key, "ALT")) {
+	} else if (std::strcmp(key, "alt") == 0 || std::strcmp(key, "ALT") == 0) {
 		keyCode = KEY_MENU;
-	} else if (std::strcmp(key, "enter") || std::strcmp(key, "ENTER")) {
+	} else if (std::strcmp(key, "enter") == 0 || std::strcmp(key, "ENTER") == 0) {
 		keyCode = KEY_RETURN;
-	} else if (std::strcmp(key, "esc") || std::strcmp(key, "ESC")) {
+	} else if (std::strcmp(key, "esc") == 0 || std::strcmp(key, "ESC") == 0) {
 		keyCode = KEY_ESCAPE;
 	}
 	return keyCode;

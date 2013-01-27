@@ -41,7 +41,7 @@ public:
 	void onMouseMotion(float valueX, float valueY);
 	bool onMousePress(int button, int valueX, int valueY);
 	void onMouseLift(int button, int valueX, int valueY);
-	//void onMouseWheel(float direction);
+	void onMouseWheel(float direction);
 
 	void update();
 	void updateRender();

@@ -46,6 +46,8 @@ public:
 	int getMouseX() const { return mouseX; }
 	int getMouseY() const { return mouseY; }
 
+	static irr::EKEY_CODE getKey(char* key);
+
 private:
 	bool Keys[KEY_KEY_CODES_COUNT], MouseButtons[MOUSE_COUNT];
 	int mouseX,mouseY;

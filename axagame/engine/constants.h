@@ -26,6 +26,8 @@
 #define LOG_NAME  "spacedrive.log"
 #define CONFIG_FILE "data/config.prop"
 
+#define STATE_DATA "data/states-data.xml"
+
 //states
 #define STATE_PLAY "PLAYSTATE"
 

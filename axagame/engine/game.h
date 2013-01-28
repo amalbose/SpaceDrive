@@ -47,8 +47,6 @@ public:
 		isRunning = !value;
 	}
 	State* getCurrentState() { return stateManager->getCurrentState(); }
-	//states
-	IEventReceiver* event;
 
 private:
 

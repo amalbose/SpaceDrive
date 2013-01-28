@@ -31,12 +31,11 @@ int GameClass::init(int argc, char **argv) {
 	}
 	Config::Instance().readConfig();
 
-	event = new Event();
 	//Setting up IrrlichDevice
 	if (Controller::Instance().init(Config::Instance().getDriverType(),
 			(core::dimension2d<u32>(Config::Instance().getScreenWidth(), Config::Instance().getScreenHeight())),
 			Config::Instance().getBits(), Config::Instance().getFullscreen(), Config::Instance().getStencil(),
-			Config::Instance().getVsync(), event)) {
+			Config::Instance().getVsync(), &EventReceiver::Instance())) {
 		Logger(ERROR) << "Failed to initialize Controller.";
 		return 1;
 	}

@@ -48,7 +48,7 @@ void Action::collectData() {
 		posEqual = line.find('=');
 		name = line.substr(0, posEqual);
 		value = line.substr(posEqual + 1);
-		keyList.insert(std::pair<std::string,const char*>(Utils::trim(name), Utils::trim(value).c_str()));
+		keyList.insert(std::pair<std::string, std::string>(Utils::trim(name), Utils::trim(value)));
 	}
 }
 
@@ -57,12 +57,25 @@ void Action::getConfiguration() {
 	collectData();
 
 	//Converting keyList to key configure map
-	//ACCELERATE
 	keyConfig.insert(std::pair<Actions, irr::EKEY_CODE>(ACCELERATE, Event::getKey(getValue("ACCELERATE"))));
+	keyConfig.insert(std::pair<Actions, irr::EKEY_CODE>(DECELERATE, Event::getKey(getValue("DECELERATE"))));
+	keyConfig.insert(std::pair<Actions, irr::EKEY_CODE>(FORWARD, Event::getKey(getValue("FORWARD"))));
+	keyConfig.insert(std::pair<Actions, irr::EKEY_CODE>(BACKWARD, Event::getKey(getValue("BACKWARD"))));
+	keyConfig.insert(std::pair<Actions, irr::EKEY_CODE>(LEFT, Event::getKey(getValue("LEFT"))));
+	keyConfig.insert(std::pair<Actions, irr::EKEY_CODE>(RIGHT, Event::getKey(getValue("RIGHT"))));
+	keyConfig.insert(std::pair<Actions, irr::EKEY_CODE>(BRAKE, Event::getKey(getValue("BRAKE"))));
+
+/*	std::cout << "key for ACCELERATE " <<getValue("ACCELERATE")<<" " <<keyConfig[ACCELERATE]<<std::endl;
+	std::cout << "key for DECELERATE "<<getValue("DECELERATE")<<" " << keyConfig[DECELERATE]<<std::endl;
+	std::cout << "key for FORWARD "<<getValue("FORWARD")<<" " << keyConfig[FORWARD]<<std::endl;
+	std::cout << "key for BACKWARD " <<getValue("BACKWARD")<<" "<< keyConfig[BACKWARD]<<std::endl;
+	std::cout << "key for LEFT " <<getValue("LEFT")<<" "<< keyConfig[LEFT]<<std::endl;
+	std::cout << "key for RIGHT " <<getValue("RIGHT")<<" "<< keyConfig[RIGHT]<<std::endl;
+	std::cout << "key for BRAKE "<<getValue("BRAKE")<<" " << keyConfig[BRAKE]<<std::endl;*/
 }
 
-const char* Action::getValue(const char* key) {
-	const char* value = keyList[key];
+std::string Action::getValue(const char* key) {
+	std::string value = keyList[key];
 	if (value == "") {
 		Logger(ERROR) << "Could not find key " << key;
 	}
@@ -72,11 +85,11 @@ const char* Action::getValue(const char* key) {
 std::string Action::getAction(Actions actionType) {
 	std::string action;
 	switch (actionType) {
-	case UP:
-		action = "up";
+	case FORWARD:
+		action = "forward";
 		break;
-	case DOWN:
-		action = "down";
+	case BACKWARD:
+		action = "backward";
 		break;
 	case ACCELERATE:
 		action = "accelerate";

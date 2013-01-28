@@ -29,13 +29,13 @@
 #include "../utils/utils.h"
 #include "../utils/logger.h"
 enum Actions {
-	ACCELERATE, DECELERATE, UP, DOWN, LEFT, RIGHT, BRAKE
+	ACCELERATE, DECELERATE, FORWARD, BACKWARD, LEFT, RIGHT, BRAKE
 };
 
 class Action {
 public:
 	Action();
-	const char* getValue(const char* key);
+	std::string getValue(const char* key);
 	int getKey(Actions actionType);
 
 private:
@@ -45,7 +45,7 @@ private:
 
 	std::ifstream* keyFile;
 	char* keyConfigFile = KEY_CONFIG;
-	std::map<std::string,const char*> keyList;
+	std::map<std::string,std::string> keyList;
 	std::map<Actions, irr::EKEY_CODE> keyConfig;
 };
 

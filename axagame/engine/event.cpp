@@ -37,7 +37,7 @@ bool Event::OnEvent(const SEvent &event) {
 	case EET_KEY_INPUT_EVENT:
 		// Send key press events
 		if (event.KeyInput.PressedDown) {
-			if (event.KeyInput.Key == KEY_KEY_X) {
+			if (event.KeyInput.Key == KEY_KEY_X) {	//TODO to be removed
 				Game::Instance().setDone(true);
 			}
 			Game::Instance().getCurrentState()->onKeyPress(event.KeyInput.Key);
@@ -84,7 +84,8 @@ bool Event::OnEvent(const SEvent &event) {
 	return false;
 }
 
-irr::EKEY_CODE Event::getKey(const char* key) {
+irr::EKEY_CODE Event::getKey(std::string keyVal) {
+	const char* key = keyVal.c_str();
 	irr::EKEY_CODE keyCode;
 	if (std::strcmp(key, "a") == 0 || std::strcmp(key, "A") == 0) {
 		keyCode = KEY_KEY_A;

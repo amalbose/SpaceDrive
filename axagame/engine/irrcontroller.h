@@ -32,13 +32,48 @@
 class IrrlichtController {
 
 public:
+
+	/**
+	 * Initializes Irrlicht driver
+	 * @param deviceType the device type
+	 * @param windowSize the window size
+	 * @param bits bit rate
+	 * @param fullscreen  whether fullscreen or not
+	 * @param stencilbuffer whether to use stencilbuffer
+	 * @param vsync whether to use vsync
+	 * @param receiver the event receiver
+	 * @return irrlicht driver
+	 */
 	int init(E_DRIVER_TYPE deviceType, const core::dimension2d<u32>& windowSize, u32 bits, bool fullscreen,
 			bool stencilbuffer, bool vsync, IEventReceiver* receiver);
 
+	/**
+	 * Drops irrlicht driver
+	 */
 	void close();
+
+	/**
+	 * Sets clear color
+	 * @param color color to be set
+	 */
 	void setClearColor(SColor color) { clearColor = color;}
+
+	/**
+	 * Begin rendering with default clear color
+	 * @return
+	 */
 	bool beginSceneRender();
+
+	/**
+	 * Begin rendering with specified clear color.
+	 * @param clearColorValue
+	 * @return
+	 */
 	bool beginSceneRender(SColor clearColorValue);
+
+	/**
+	 * Ends scene render
+	 */
 	void endSceneRender();
 
 private:

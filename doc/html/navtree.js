@@ -1,6 +1,14 @@
 var NAVTREE =
 [
   [ "SpaceDrive", "index.html", [
+    [ "Space Drive", "index.html", [
+      [ "Introduction", "index.html#intro_sec", null ],
+      [ "Installation", "index.html#install_sec", [
+        [ "Step 1: Basic Requirements", "index.html#step1", null ],
+        [ "Step 2: Importing project", "index.html#step2", null ]
+      ] ]
+    ] ],
+    [ "SpaceDrive", "md_README.html", null ],
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
       [ "Class Index", "classes.html", null ],
@@ -31,7 +39,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "action_8cpp.html",
-"defaults_8h.html#ae19cb678e1e45383c256d79376c38759"
+"dir_8d5ba1530d921c23e3dd22cb47783f0e.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

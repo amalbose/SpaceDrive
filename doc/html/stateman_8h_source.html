@@ -45,6 +45,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -91,7 +92,7 @@ $(document).ready(function(){initNavTree('stateman_8h_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -132,27 +133,30 @@ $(document).ready(function(){initNavTree('stateman_8h_source.html','');});
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;../game/play.h&quot;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="state_8h.html">state.h</a>&quot;</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="classStateManager.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStateManager.html">StateManager</a> {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classStateManager.html#a3e2be96d935eb56813b096a885d58587">StateManager</a>();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classStateManager.html#a05a43504a033f1befad5c5118249ec6f">~StateManager</a>();</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="classStateManager.html#aad2408af188b850fa74ce4704a75962a">   32</a></span>&#160;    <a class="code" href="classState.html">State</a>* <a class="code" href="classStateManager.html#aad2408af188b850fa74ce4704a75962a">getCurrentState</a>() { <span class="keywordflow">return</span> <a class="code" href="classStateManager.html#ac2f7dbc8b29aefa2154e6b6172db7819">currentState</a>; };</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStateManager.html#a04c562465c87babad3a4a6c26a30a9c3">setCurrentState</a>(irr::core::stringc strName);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="code" href="classStateManager.html#a4eed6c4bcd2601e403614fd99192fb9a">   36</a></span>&#160;    core::array&lt;State*&gt; <a class="code" href="classStateManager.html#a4eed6c4bcd2601e403614fd99192fb9a">stateList</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStateManager.html#a30f67679699cce40b58761dd4e1498a8">clear</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="classStateManager.html#ac2f7dbc8b29aefa2154e6b6172db7819">   38</a></span>&#160;    <a class="code" href="classState.html">State</a>* <a class="code" href="classStateManager.html#ac2f7dbc8b29aefa2154e6b6172db7819">currentState</a>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* STATEMAN_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="classStateManager.html">   31</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStateManager.html">StateManager</a> {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classStateManager.html#a3e2be96d935eb56813b096a885d58587">StateManager</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classStateManager.html#a05a43504a033f1befad5c5118249ec6f">~StateManager</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="classStateManager.html#aad2408af188b850fa74ce4704a75962a">   47</a></span>&#160;    <a class="code" href="classState.html">State</a>* <a class="code" href="classStateManager.html#aad2408af188b850fa74ce4704a75962a">getCurrentState</a>() { <span class="keywordflow">return</span> <a class="code" href="classStateManager.html#ac2f7dbc8b29aefa2154e6b6172db7819">currentState</a>; };</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStateManager.html#a04c562465c87babad3a4a6c26a30a9c3">setCurrentState</a>(irr::core::stringc strName);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="code" href="classStateManager.html#a4eed6c4bcd2601e403614fd99192fb9a">   56</a></span>&#160;    core::array&lt;State*&gt; <a class="code" href="classStateManager.html#a4eed6c4bcd2601e403614fd99192fb9a">stateList</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStateManager.html#a30f67679699cce40b58761dd4e1498a8">clear</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="code" href="classStateManager.html#ac2f7dbc8b29aefa2154e6b6172db7819">   58</a></span>&#160;    <a class="code" href="classState.html">State</a>* <a class="code" href="classStateManager.html#ac2f7dbc8b29aefa2154e6b6172db7819">currentState</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* STATEMAN_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_5677f45df35882eeed1d8a803da9a51d.html">axagame</a></li><li class="navelem"><a class="el" href="dir_ffbc4f34f21398cc2e55b026399370e6.html">engine</a></li><li class="navelem"><a class="el" href="stateman_8h.html">stateman.h</a></li>
-    <li class="footer">Generated on Fri Feb 8 2013 22:49:05 for SpaceDrive by
+    <li class="footer">Generated on Sat Feb 9 2013 22:09:46 for SpaceDrive by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

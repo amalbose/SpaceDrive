@@ -2,6 +2,7 @@ var searchData=
 [
   ['game',['Game',['../game_8h.html#adc8df4ffe0a7a9f6e0f2cf639d52bb4d',1,'game.h']]],
   ['game_2ecpp',['game.cpp',['../game_8cpp.html',1,'']]],
+  ['game_2ed',['game.d',['../game_8d.html',1,'']]],
   ['game_2eh',['game.h',['../game_8h.html',1,'']]],
   ['game_5fname',['GAME_NAME',['../constants_8h.html#aed7818555b2da57314243d796315e4e9',1,'constants.h']]],
   ['game_5fversion',['GAME_VERSION',['../constants_8h.html#af6419fce288d0638e125e8454f070db7',1,'constants.h']]],
@@ -40,5 +41,6 @@ var searchData=
   ['getvalue',['getValue',['../classAction.html#a2434bc98f506aac23d08bbf9dbec867c',1,'Action::getValue()'],['../classProperties.html#acfc8b3a2387ce91acbd60bc615a86dbf',1,'Properties::getValue()']]],
   ['getvsync',['getVsync',['../classConfigClass.html#a018fc6fe69fcfb126bc5330593343f53',1,'ConfigClass']]],
   ['globals_2ecpp',['globals.cpp',['../globals_8cpp.html',1,'']]],
+  ['globals_2ed',['globals.d',['../globals_8d.html',1,'']]],
   ['globals_2eh',['globals.h',['../globals_8h.html',1,'']]]
 ];

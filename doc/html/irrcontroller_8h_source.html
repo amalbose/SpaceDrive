@@ -45,6 +45,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -91,7 +92,7 @@ $(document).ready(function(){initNavTree('irrcontroller_8h_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -136,34 +137,40 @@ $(document).ready(function(){initNavTree('irrcontroller_8h_source.html','');});
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="constants_8h.html">constants.h</a>&quot;</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;../utils/logger.h&quot;</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="classIrrlichtController.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="classIrrlichtController.html">IrrlichtController</a> {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classIrrlichtController.html#a0c12c37dbd5f565fba0dde678599fbef">init</a>(E_DRIVER_TYPE deviceType, <span class="keyword">const</span> core::dimension2d&lt;u32&gt;&amp; windowSize, u32 bits, <span class="keywordtype">bool</span> fullscreen,</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordtype">bool</span> stencilbuffer, <span class="keywordtype">bool</span> vsync, IEventReceiver* receiver);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classIrrlichtController.html#a5330f639df29aa7931efbe1d6e653edc">close</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="classIrrlichtController.html#aa1ffad11499ea63678a2273bcfecc8a6">   39</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classIrrlichtController.html#aa1ffad11499ea63678a2273bcfecc8a6">setClearColor</a>(SColor color) { <a class="code" href="classIrrlichtController.html#a9791cf75e4a3501119648b46dfaad34e">clearColor</a> = color;}</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classIrrlichtController.html#a903bac6a19c6b8aff471e11d9232a9fa">beginSceneRender</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classIrrlichtController.html#a903bac6a19c6b8aff471e11d9232a9fa">beginSceneRender</a>(SColor clearColorValue);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classIrrlichtController.html#a0fceada0f73f76840f3976fcf0e96dc0">endSceneRender</a>();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="classIrrlichtController.html#a9791cf75e4a3501119648b46dfaad34e">   45</a></span>&#160;    SColor <a class="code" href="classIrrlichtController.html#a9791cf75e4a3501119648b46dfaad34e">clearColor</a>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="classIrrlichtController.html#a6c6197d45d7c5591b0214d9d61952a02">   46</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classIrrlichtController.html#a6c6197d45d7c5591b0214d9d61952a02">showCursor</a>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="irrcontroller_8h.html#ae62fd040c32a1b7ffc8f86f1a3b5aadc">   50</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="classSingleton.html">Singleton&lt;IrrlichtController&gt;</a> <a class="code" href="irrcontroller_8h.html#ae62fd040c32a1b7ffc8f86f1a3b5aadc">Controller</a>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* IRRCONTROLLER_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="classIrrlichtController.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="classIrrlichtController.html">IrrlichtController</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classIrrlichtController.html#a0c12c37dbd5f565fba0dde678599fbef">init</a>(E_DRIVER_TYPE deviceType, <span class="keyword">const</span> core::dimension2d&lt;u32&gt;&amp; windowSize, u32 bits, <span class="keywordtype">bool</span> fullscreen,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordtype">bool</span> stencilbuffer, <span class="keywordtype">bool</span> vsync, IEventReceiver* receiver);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classIrrlichtController.html#a5330f639df29aa7931efbe1d6e653edc">close</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="code" href="classIrrlichtController.html#aa1ffad11499ea63678a2273bcfecc8a6">   62</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classIrrlichtController.html#aa1ffad11499ea63678a2273bcfecc8a6">setClearColor</a>(SColor color) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="classIrrlichtController.html#a9791cf75e4a3501119648b46dfaad34e">clearColor</a> = color;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classIrrlichtController.html#a903bac6a19c6b8aff471e11d9232a9fa">beginSceneRender</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classIrrlichtController.html#a903bac6a19c6b8aff471e11d9232a9fa">beginSceneRender</a>(SColor clearColorValue);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classIrrlichtController.html#a0fceada0f73f76840f3976fcf0e96dc0">endSceneRender</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="code" href="classIrrlichtController.html#a9791cf75e4a3501119648b46dfaad34e">   85</a></span>&#160;    SColor <a class="code" href="classIrrlichtController.html#a9791cf75e4a3501119648b46dfaad34e">clearColor</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="code" href="classIrrlichtController.html#a6c6197d45d7c5591b0214d9d61952a02">   86</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classIrrlichtController.html#a6c6197d45d7c5591b0214d9d61952a02">showCursor</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="code" href="irrcontroller_8h.html#ae62fd040c32a1b7ffc8f86f1a3b5aadc">   89</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="classSingleton.html">Singleton&lt;IrrlichtController&gt;</a> <a class="code" href="irrcontroller_8h.html#ae62fd040c32a1b7ffc8f86f1a3b5aadc">Controller</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* IRRCONTROLLER_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_5677f45df35882eeed1d8a803da9a51d.html">axagame</a></li><li class="navelem"><a class="el" href="dir_ffbc4f34f21398cc2e55b026399370e6.html">engine</a></li><li class="navelem"><a class="el" href="irrcontroller_8h.html">irrcontroller.h</a></li>
-    <li class="footer">Generated on Fri Feb 8 2013 22:49:05 for SpaceDrive by
+    <li class="footer">Generated on Sat Feb 9 2013 22:09:46 for SpaceDrive by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

@@ -45,6 +45,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -91,7 +92,7 @@ $(document).ready(function(){initNavTree('action_8h_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -149,24 +150,26 @@ $(document).ready(function(){initNavTree('action_8h_source.html','');});
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classAction.html#a7c17043fb35861f8c9c84ff7717139af">getKey</a>(<a class="code" href="action_8h.html#a250372292659bed7ae290d8621f88ccf">Actions</a> actionType);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classAction.html#af5e8bfdcfea0ec68ff7b3e852fdbcf7d">collectData</a>();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classAction.html#ac71c750d796ac5b1a45486d375e8ac8a">getConfiguration</a>();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    std::string <a class="code" href="classAction.html#ac285a75854bc2416e281e6486777789a">getAction</a>(<a class="code" href="action_8h.html#a250372292659bed7ae290d8621f88ccf">Actions</a> actionType);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="code" href="classAction.html#af6d518d6cc0dcd848d63b74588f8bbb4">   62</a></span>&#160;    std::ifstream* <a class="code" href="classAction.html#af6d518d6cc0dcd848d63b74588f8bbb4">keyFile</a>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="code" href="classAction.html#aa205849f43fd49e84ddeae30ecb7fa09">   63</a></span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="classAction.html#aa205849f43fd49e84ddeae30ecb7fa09">keyConfigFile</a> = <a class="code" href="constants_8h.html#a66a174a0ba06e62422877c0c47e54e7c">KEY_CONFIG</a>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="classAction.html#a42939f0076b4ff42d692fe4401d52a33">   64</a></span>&#160;    std::map&lt;std::string,std::string&gt; <a class="code" href="classAction.html#a42939f0076b4ff42d692fe4401d52a33">keyList</a>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="code" href="classAction.html#ab9e259acda45cc88de250761a7b0a78a">   65</a></span>&#160;    std::map&lt;Actions, irr::EKEY_CODE&gt; <a class="code" href="classAction.html#ab9e259acda45cc88de250761a7b0a78a">keyConfig</a>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classAction.html#af5e8bfdcfea0ec68ff7b3e852fdbcf7d">collectData</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classAction.html#ac71c750d796ac5b1a45486d375e8ac8a">getConfiguration</a>();</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* ACTION_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    std::string <a class="code" href="classAction.html#ac285a75854bc2416e281e6486777789a">getAction</a>(<a class="code" href="action_8h.html#a250372292659bed7ae290d8621f88ccf">Actions</a> actionType);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="code" href="classAction.html#af6d518d6cc0dcd848d63b74588f8bbb4">   75</a></span>&#160;    std::ifstream* <a class="code" href="classAction.html#af6d518d6cc0dcd848d63b74588f8bbb4">keyFile</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="code" href="classAction.html#aa205849f43fd49e84ddeae30ecb7fa09">   76</a></span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="classAction.html#aa205849f43fd49e84ddeae30ecb7fa09">keyConfigFile</a> = <a class="code" href="constants_8h.html#a66a174a0ba06e62422877c0c47e54e7c">KEY_CONFIG</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="code" href="classAction.html#a42939f0076b4ff42d692fe4401d52a33">   77</a></span>&#160;    std::map&lt;std::string,std::string&gt; <a class="code" href="classAction.html#a42939f0076b4ff42d692fe4401d52a33">keyList</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="code" href="classAction.html#ab9e259acda45cc88de250761a7b0a78a">   78</a></span>&#160;    std::map&lt;Actions, irr::EKEY_CODE&gt; <a class="code" href="classAction.html#ab9e259acda45cc88de250761a7b0a78a">keyConfig</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* ACTION_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_5677f45df35882eeed1d8a803da9a51d.html">axagame</a></li><li class="navelem"><a class="el" href="dir_6cdf468f1e5ef435d20c6b284c76567d.html">game</a></li><li class="navelem"><a class="el" href="action_8h.html">action.h</a></li>
-    <li class="footer">Generated on Fri Feb 8 2013 22:49:05 for SpaceDrive by
+    <li class="footer">Generated on Sat Feb 9 2013 22:09:46 for SpaceDrive by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

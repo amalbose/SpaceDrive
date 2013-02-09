@@ -1,6 +1,7 @@
 var searchData=
 [
   ['readconfig',['readConfig',['../classConfigClass.html#a5860210979ecb7c95f3e1476473ab8f5',1,'ConfigClass']]],
+  ['readme_2emd',['README.md',['../README_8md.html',1,'']]],
   ['render',['render',['../classState.html#ae7da364b17551ff81363c73dd4e988a5',1,'State::render()'],['../classPlay.html#a891a32e3eb2d883486212b186ebefa07',1,'Play::render()']]],
   ['reportinglevel',['reportingLevel',['../classLog.html#a244398d557d7d9837885d1dd0df3e200',1,'Log']]],
   ['resetconfig',['resetConfig',['../classConfigClass.html#a8d54a59235d64cbe8828eb9f5646275e',1,'ConfigClass']]],

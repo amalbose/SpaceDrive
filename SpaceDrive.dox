@@ -1,0 +1,17 @@
+/*! \mainpage Space Drive
+ *
+ *
+ * Space ship game on AxaGame framework using Irrlicht engine
+ *
+ * \section install_sec Installation
+ *
+ * \subsection step1 Step 1: Basic Requirements
+ * * [Irrlicht 1.7](http://irrlicht.sourceforge.net/)
+ * * [Bullet Physics](http://bulletphysics.org/)
+ * * Using [RapidXML] (http://rapidxml.sourceforge.net/) - Included with the source.
+ * 
+ * \subsection step2 Step 2: Importing project
+ * * Import the project in Eclipse CDT
+ * * Build the project and run.
+ * 	
+ */

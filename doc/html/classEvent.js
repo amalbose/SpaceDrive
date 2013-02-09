@@ -7,7 +7,6 @@ var classEvent =
       [ "MOUSE_COUNT", "classEvent.html#a19e4b0db84fc032bbfece8279e31eb47a37bf069cae6fc0bcb7fcb0e79ccfd854", null ]
     ] ],
     [ "Event", "classEvent.html#a5a40dd4708297f7031e29b39e039ae10", null ],
-    [ "getKey", "classEvent.html#a2d449662315ac9953b45adf389ece358", null ],
     [ "getKeyState", "classEvent.html#a894d23d853f235dc47aa32f08149781e", null ],
     [ "getMouseState", "classEvent.html#a68bcd1df62550034eeca0024d5cfbced", null ],
     [ "getMouseX", "classEvent.html#a5bb722014db36779de92a83b39c58372", null ],

@@ -36,24 +36,54 @@
 class GameClass {
 public:
 
+	/**
+	 * Initializes the game by getting values from configuration and creating Irrlicht driver.
+	 * @param argc
+	 * @param argv
+	 * @return
+	 */
 	int init(int argc, char** argv);
+
+	/**
+	 * Game update method.
+	 */
 	void update();
+
+	/**
+	 * Deletes irrlicht driver.
+	 */
 	void close();
 
+	/**
+	 * Checks if game is running or not.
+	 * @return False if not running and True otherwise.
+	 */
 	bool isDone() {
 		return !isRunning;
 	}
+
+	/**
+	 * Sets the value for isRunning.
+	 * @param value Whether running or not.
+	 */
 	void setDone(bool value) {
 		isRunning = !value;
 	}
-	State* getCurrentState() { return stateManager->getCurrentState(); }
+
+	/**
+	 * Gets the current state.
+	 * @return current state.
+	 */
+	State* getCurrentState() {
+		return stateManager->getCurrentState();
+	}
 
 private:
 
 	bool isRunning, isWindowActive;
 	StateManager *stateManager;
 	int loops;
-	float nextTick,interpolation;
+	float nextTick, interpolation;
 	const int TICKS_PER_SECOND = 25;
 	const int SKIP_TICKS = 1000 / TICKS_PER_SECOND;
 	const int MAX_FRAMESKIP = 5;

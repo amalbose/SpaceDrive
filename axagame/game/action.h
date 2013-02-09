@@ -28,19 +28,48 @@
 #include "../engine/event.h"
 #include "../utils/utils.h"
 #include "../utils/logger.h"
+
 enum Actions {
 	ACCELERATE, DECELERATE, FORWARD, BACKWARD, LEFT, RIGHT, BRAKE
 };
 
+/**
+ * Action class manages the mapping of actions to keys.
+ */
 class Action {
 public:
 	Action();
+
+	/**
+	 * Gets the value for the key
+	 * @param key
+	 * @return the value for the given key
+	 */
 	std::string getValue(const char* key);
+
+	/**
+	 * Gets the key for the corresponding Action type
+	 * @param actionType the action type.
+	 * @return
+	 */
 	int getKey(Actions actionType);
 
 private:
+	/**
+	 * Collects data from config file(KEY_CONFIG).
+	 */
 	void collectData();
+
+	/**
+	 * Sets the configuration from the data collected from config file (KEY_CONFIG).
+	 */
 	void getConfiguration();
+
+	/**
+	 * Gets the action string for given action type.
+	 * @param actionType the action type
+	 * @return the action in string form.
+	 */
 	std::string getAction(Actions actionType);
 
 	std::ifstream* keyFile;

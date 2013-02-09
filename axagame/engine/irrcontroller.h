@@ -29,6 +29,9 @@
 #include "constants.h"
 #include "../utils/logger.h"
 
+/**
+ * IrrlichtController class manages the creation and deletion of irrlicht driver based on specified configuration.
+ */
 class IrrlichtController {
 
 public:
@@ -56,7 +59,9 @@ public:
 	 * Sets clear color
 	 * @param color color to be set
 	 */
-	void setClearColor(SColor color) { clearColor = color;}
+	void setClearColor(SColor color) {
+		clearColor = color;
+	}
 
 	/**
 	 * Begin rendering with default clear color
@@ -80,7 +85,6 @@ private:
 	SColor clearColor;
 	bool showCursor;
 };
-
 
 typedef Singleton<IrrlichtController> Controller;
 

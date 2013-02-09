@@ -33,6 +33,9 @@
 #include "stateman.h"
 #include "constants.h"
 
+/**
+ * The main Game class which handles the creation of irrlicht driver and the game loop.
+ */
 class GameClass {
 public:
 

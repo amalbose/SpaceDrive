@@ -25,11 +25,31 @@
 #include "../game/play.h"
 #include "state.h"
 
+/**
+ * Class to manage the various states of game.
+ */
 class StateManager {
 public:
+	/**
+	 * Constructor which adds all states to the state list.
+	 */
 	StateManager();
+
+	/**
+	 * Desctructor which removes all states.
+	 */
 	virtual ~StateManager();
+
+	/**
+	 * Gets the current state.
+	 * @return current state
+	 */
 	State* getCurrentState() { return currentState; };
+
+	/**
+	 * Sets the current state with the given value.
+	 * @param strName name of state
+	 */
 	void setCurrentState(irr::core::stringc strName);
 
 private:

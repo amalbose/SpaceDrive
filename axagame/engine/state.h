@@ -22,10 +22,17 @@
 #define STATE_H_
 
 #include <irrlicht.h>
-
+/**
+ * Class to define states.
+ */
 class State {
 
 public:
+
+	/**
+	 * Gets the name of the state
+	 * @return name of state
+	 */
 	irr::core::stringc getStateName() { return stateName; }
 	virtual int init() { return 1; }
 	virtual int close() { return 1; }
@@ -42,6 +49,10 @@ public:
 	virtual void update() { }
 	virtual void updateRender() { }
 	virtual void render(float interpolation) { }
+	/**
+	 * Sets the state name
+	 * @param name statename
+	 */
 	void setStateName(irr::core::stringc name) { stateName = name; }
 private:
 	irr::core::stringc stateName;
